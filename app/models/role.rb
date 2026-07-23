@@ -1,15 +1,15 @@
 class Role < ActiveRecord::Base
   has_many :auditions
 
-  def actors_names
+  def actors
     auditions.pluck(:actor)
   end
 
-  def locations_names
+  def locations
     auditions.pluck(:location)
   end
 
-  def hire_lead_actor
+  def lead
     hired_audition = auditions.find_by(hired: true)
 
     if hired_audition
@@ -19,7 +19,7 @@ class Role < ActiveRecord::Base
     end
   end
 
-  def hire_understudy
+  def understudy
     hired_understudy = auditions.where(hired: true)[1]
 
     if hired_understudy
