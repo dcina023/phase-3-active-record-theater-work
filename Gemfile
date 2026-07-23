@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 ruby "3.3.5"
-gem "activerecord", "~> 5.2"
+gem "activerecord", "~> 7.2"
 gem "fiddle"
 gem "logger"
 gem "ostruct"
