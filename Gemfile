@@ -13,3 +13,7 @@ gem "sqlite3"
 
 gem "rubocop"
 gem "rubocop-rake", "~> 0.7.1"
+
+group :development, :test do
+  gem "faker"
+end
